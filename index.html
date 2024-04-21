@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects and Arrays</title>
+</head>
+<body>
+    <h1>Objects and Arrays</h1>
+
+    <script>
+        console.log("hello world")
+
+        let user = { name: 'Jane', born: 1977, isHappy: true }
+        let name = user.name
+        
+        user.hobbies = ['hiking', 'fishing ']
+        
+        function makeAnimal(name, age, species) {
+        
+        let animal = {}
+         animal.name = name,
+         animal.age = age,
+         animal.species = species
+         return { name, age, species }
+        }
+        makeAnimal('Goldie', 44, 'Goldfish')
+
+        let plane = { model: ''} 
+        if (plane.model) {
+            
+        }
+        if (plane.model !== undefined) {
+           
+        }
+
+        let arr = ['a', 'b', 'c', 45, true]
+        let first = arr[0]        
+        let second = arr[1]
+        let last = arr[arr.length -1]
+
+        function isEvenNumOfElements(arr) {
+            let isEven = arr.length % 2 === 0
+            let isOdd = arr.length % 2 !== 0
+         if (isEven) {
+            console.log('arr has an even number of elements')
+        } else if (isOdd) {
+            console.log('arr has an odd number of elements')
+        }
+
+    }
+    
+    function getFirst(arr) {
+        return arr[0]       
+    }
+    function getLast(arr) {
+        return arr.at(-1)
+    }
+
+
+    let numbers = [1, 2, 3, 4]
+    numbers[4] = 5
+    numbers.push(6)
+
+    let obj = { name: 'foo', age: 33, isHappy: true }
+    let letters = ['a', 'b', 'c', 'd']
+    
+    for (let key in obj) {
+        
+        let value = obj[key]
+    }
+    for (let idx in letters) {
+        
+        let element = letters[idx]
+       
+    }
+
+    function loopOverChars(word) {
+        let result = []
+        let split = word.split('')
+        for (let i in split) {
+         let char = split[i]
+         result.push(char.toUpperCase())
+    }
+    return result.join('')
+}
+    loopOverChars('Spitfire')
+    
+
+    </script>
+</body>
+</html>
